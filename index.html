@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="master.css">
+</head>
+
+<body>
+    <header id="_main_header">
+        <h1>Task Manager</h1>
+
+        <div class="header-buttons">
+            <button id="_new_project">New Project</button>
+            <button id="_load_project">Load Project</button>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="#">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <div class="content">
+        <!-- Your main page content here -->
+        <header id="content_header">
+            <button id="_new_item">New Item</button>
+            <button id="_delete_item">Delete Item</button>
+            <button id="_rename_item">Rename Item</button>
+        </header>
+        <ul id="todo-list">
+        </ul>
+    </div>
+
+    <!-- Load Project Modal -->
+    <div id="load-project-modal" class="modal">
+        <div class="modal-content">
+            <h2>Load Project</h2>
+            <ul id="project-list">
+                <!-- Project items will be populated here -->
+            </ul>
+            <div class="modal-buttons">
+                <button id="load-project-btn">Load</button>
+                <button id="delete-all-projects-btn" style="background-color: crimson;">Delete All Projects</button>
+                <button id="cancel-load-project">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal for New Item -->
+    <div id="item-modal" class="modal">
+        <div class="modal-content">
+            <h2>New Task</h2>
+            <label>
+                Task Name:
+                <input type="text" id="task-name" />
+            </label>
+            <label>
+                <input type="checkbox" id="task-important" />
+                Mark as Important
+            </label>
+            <div class="modal-buttons">
+                <button id="create-task">Create</button>
+                <button id="cancel-task">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Delete Confirmation -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <h2>Delete Selected Tasks?</h2>
+            <p>This action cannot be undone.</p>
+            <div class="modal-buttons">
+                <button id="confirm-delete">Delete</button>
+                <button id="cancel-delete">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Rename Task -->
+    <div id="rename-modal" class="modal">
+        <div class="modal-content">
+            <h2>Rename Task</h2>
+            <label>
+                New Name:
+                <input type="text" id="rename-task-name" />
+            </label>
+            <div class="modal-buttons">
+                <button id="confirm-rename">Rename</button>
+                <button id="cancel-rename">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
